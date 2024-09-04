@@ -1,0 +1,35 @@
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/barinstaColorPaperLight"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/full_content_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar" />
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/barinstaColorPaperLight"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+            <TextView
+                    android:id="@+id/full_content_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:padding="4dp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/bacasime_antique"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"/>
+        </com.google.android.material.card.MaterialCardView>
+    </ScrollView>
+</LinearLayout>

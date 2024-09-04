@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <jp.wasabeef.richeditor.RichEditor
+            android:id="@+id/editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <HorizontalScrollView
+            android:id="@+id/editingOptions"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageButton
+                    android:id="@+id/action_bold"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/baseline_format_bold_24" />
+
+            <ImageButton
+                    android:id="@+id/action_italic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/baseline_format_italic_24" />
+
+            <ImageButton
+                    android:id="@+id/action_underline"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/baseline_format_underlined_24" />
+
+
+            <ImageButton
+                    android:id="@+id/action_insert_bullets"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/format_list_bulleted_24px" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageButton
+            android:id="@+id/action_add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@drawable/image_24px"
+            android:contentDescription="@null" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="HTML Preview"
+                android:textSize="12sp" />
+
+        <TextView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" />
+    </LinearLayout>
+</LinearLayout>

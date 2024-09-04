@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   app:cardBackgroundColor="@color/barinstaColorPaperLight"
+                                                   style="?attr/materialCardViewElevatedStyle"
+                                                   android:background="@drawable/background_lower_corner_border">
+
+    <LinearLayout
+            android:id="@+id/overall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/background_border"
+                android:visibility="visible"/>
+
+        <LinearLayout
+                android:id="@+id/overlayImageDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:padding="4dp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/bacasime_antique"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"/>
+        </LinearLayout>
+
+        <!-- Like, View, Share Buttons -->
+        <LinearLayout
+                android:id="@+id/like_view_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toStartOf="@id/bottom_navigation"
+                android:layout_above="@id/bottom_navigation"
+                android:layout_alignParentBottom="true">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                <ImageButton
+                        android:id="@+id/like_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:paddingStart="4dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/baseline_keyboard_double_arrow_up_24"/>
+                <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/like_count"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingRight="12dp"
+                        android:text="29"
+                        app:fontFamily="More Fonts..."/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                <ImageButton
+                        android:id="@+id/dislike_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:paddingStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/baseline_keyboard_double_arrow_down_24"/>
+                <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/dislike_count"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingEnd="12dp"
+                        android:text="29"
+                />
+            </LinearLayout>
+
+            <ImageButton
+                    android:id="@+id/commentIcon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:paddingStart="12dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/baseline_comment_24"/>
+            <TextView
+                    android:id="@+id/comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="4dp"
+                    android:layout_gravity="center"
+                    android:paddingRight="12dp"
+                    android:text="29"/>
+
+            <ImageButton
+                    android:id="@+id/bookmarkIcon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:paddingStart="12dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/baseline_bookmark_24"/>
+            <TextView
+                    android:id="@+id/bookmark_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingRight="12dp"
+                    android:text="29"/>
+            <ImageButton
+                    android:id="@+id/shareIcon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:paddingStart="12dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/baseline_share_24"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
